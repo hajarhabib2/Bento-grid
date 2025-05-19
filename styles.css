@@ -1,0 +1,319 @@
+:root {
+  --Purple-100: hsl(254, 88%, 90%);
+  --Purple-500: hsl(256, 67%, 59%);
+
+  --Yellow-100: hsl(31, 66%, 93%);
+  --Yellow-500: hsl(39, 100%, 71%);
+
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 7%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  font-family: "DM Sans", sans-serif;
+  place-content: center;
+  display: grid;
+  background-color: #f5f5f5;
+}
+
+h1,
+h2,
+h3,
+p {
+  letter-spacing: -1px;
+}
+
+.dashboard-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 900px;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "box1 box2 box2 box3"
+    "box1 box2 box2 box3"
+    "box1 box5 box6 box3"
+    "box1 box5 box6 box3"
+    "box1 box5 box6 box3"
+    "box4 box5 box6 box3"
+    "box4 box5 box6 box3"
+    "box4 box5 box6 box3"
+    "box4 box7 box8 box8"
+    "box4 box7 box8 box8"
+    "box4 box7 box8 box8";
+}
+
+.card {
+  border-radius: 0.5rem;
+  border-style: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-1 {
+  background-color: var(--Yellow-100);
+  font-weight: 500;
+  grid-area: box1;
+  padding: 70px 15px;
+  height: fit-content;
+}
+.card-1 h2 {
+  line-height: 0.9;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+.card-1 em {
+  color: var(--Purple-500);
+}
+.card-5,
+.card-6 {
+  background-color: var(--Yellow-500);
+}
+
+.card-2,
+.card-8 {
+  background-color: var(--Purple-500);
+  color: var(--White);
+}
+
+.card-3 {
+  background-color: var(--Purple-100);
+}
+
+.card-4,
+.card-7 {
+  background-color: var(--White);
+}
+
+.card-2 {
+  grid-area: box2;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  width: 450px;
+}
+.card-2 h1 {
+  text-align: center;
+  font-size: 45px;
+}
+.card-2 span {
+  color: var(--Yellow-500);
+}
+.card-2 img {
+  width: 150px;
+}
+.card-3 {
+  grid-area: box3;
+  height: fit-content;
+  padding: 1rem 0 0rem 1rem;
+}
+.card-3 h3 {
+  padding: 1rem 1rem 1.5rem 1.5rem;
+  font-size: 24px;
+  font-weight: 600;
+}
+.card-3 p {
+  padding: 1rem 1rem 0 1rem;
+  line-height: 1;
+  font-size: 17px;
+  font-weight: 400;
+}
+.card-3 img {
+  width: 100%;
+  height: 250px;
+  padding: 0 0 0 2rem;
+  object-fit: cover;
+  object-position: left;
+}
+.card-4 {
+  grid-area: box5;
+  padding: 1rem 2.75rem 0.3rem 1rem;
+  background-color: var(--White);
+  overflow: hidden;
+  height: fit-content;
+}
+.card-4 p {
+  padding-top: 25px;
+  line-height: 24px;
+  font-size: 24px;
+  letter-spacing: -2px;
+  font-weight: 500;
+}
+.card-4 img {
+  object-position: left;
+  width: 200px;
+  height: 20%;
+  object-position: left;
+  object-fit: cover;
+}
+
+.card-5 {
+  grid-area: box6;
+  padding: 1.5rem 1.75rem 0 1rem;
+  height: 200px;
+  overflow: hidden;
+}
+.card-5 p {
+  padding-bottom: 10px;
+  line-height: 0.8;
+  font-size: 24px;
+  font-weight: 500;
+}
+.card-5 img {
+  object-fit: cover;
+}
+.card-6 {
+  grid-area: box4;
+  padding: 1rem;
+  height: fit-content;
+}
+.card-6 h2 {
+  margin-bottom: 2rem;
+  letter-spacing: -2px;
+}
+.card-7 {
+  height: fit-content;
+  grid-area: box7;
+  padding: 1.6rem;
+}
+
+.card-7 img {
+  margin-top: 0.5rem;
+  width: 90%;
+}
+.card-8 {
+  grid-area: box8;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: row;
+}
+.card-8 img {
+  width: 50%;
+  object-fit: cover;
+}
+.card-8 h2 {
+  flex: 1;
+  font-size: 30px;
+}
+@media (max-width: 991.98px) {
+  .dashboard-grid {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    grid-template-areas:
+      "box2"
+      "box4"
+      "box5"
+      "box3"
+      "box8"
+      "box7"
+      "box1"
+      "box6";
+  }
+
+  .card {
+    width: 92%;
+    p,
+    h3 {
+      font-size: 30px;
+      font-weight: 500;
+    }
+  }
+
+  .card-1 {
+    grid-area: box1;
+    height: fit-content;
+    h2 {
+      font-size: 35px;
+    }
+    img {
+      width: 70%;
+      padding: 1rem 2rem 1rem 1rem;
+    }
+  }
+  .card-2 {
+    grid-area: box2;
+    padding: 2%;
+    img {
+      width: 50%;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+  .card-3 {
+    grid-area: box3;
+    padding-left: 1rem;
+    img {
+      width: 90%;
+      border-radius: 15px;
+      object-position: center;
+    }
+    p {
+      font-size: 22px;
+      padding: 1rem;
+      text-align: center;
+    }
+  }
+  .card-4 {
+    grid-area: box4;
+    img {
+      width: 100%;
+    }
+  }
+
+  .card-5 {
+    grid-area: box5;
+    img {
+      width: 70%;
+    }
+  }
+  .card-6 {
+    grid-area: box6;
+    padding: rem 3rem;
+    h2 {
+      font-size: 35px;
+    }
+    img {
+      width: 70%;
+    }
+  }
+  .card-7 {
+    grid-area: box7;
+    h1 {
+      font-size: 50px;
+    }
+    p {
+      font-size: 18px;
+    }
+    img {
+      width: 60%;
+    }
+  }
+  .card-8 {
+    grid-area: box8;
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 70%;
+    }
+    h2 {
+      text-align: center;
+      padding: 1rem 4rem 1rem;
+    }
+  }
+}
